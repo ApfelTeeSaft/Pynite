@@ -1,0 +1,16 @@
+{
+    "token": "eg1~h1e35h4tr5h456r4h75r4h8r4h5r45h4r5",
+    "session_id": "3c3662bcb661d6de679c636744c66b62",
+    "token_type": "bearer",
+    "client_id": "r54hre45h4r5th48r5hrhr54h56rhr",
+    "internal_client": true,
+    "client_service": "fortnite",
+    "account_id": "ApfelTeeSaft",
+    "expires_in": 28800,
+    "expires_at": "9999-12-02T01:12:01.100Z",
+    "auth_method": "exchange_code",
+    "display_name": "ApfelTeeSaft",
+    "app": "fortnite",
+    "in_app_id": "r54hre45h4r5th48r5hrhr54h56rhr",
+    "device_id": "he75h4et7hr52h"
+}

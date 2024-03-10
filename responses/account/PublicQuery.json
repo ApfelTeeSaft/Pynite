@@ -1,0 +1,32 @@
+{
+    "profileRevision": 1,
+    "profileId": "common_public",
+    "profileChangesBaseRevision": 1,
+    "profileChanges": [
+        {
+            "changeType": "fullProfileUpdate",
+            "profile": {
+                "_id": "r54hre45h4r5th48r5hrhr54h56rhr",
+                "created": "0001-01-01T00:00:00.000Z",
+                "updated": "0001-01-01T00:00:00.000Z",
+                "rvn": 1,
+                "wipeNumber": 1,
+                "accountId": "r54hre45h4r5th48r5hrhr54h56rhr",
+                "profileId": "common_public",
+                "version": "no_version",
+                "items": {},
+                "stats": {
+                    "attributes": {
+                        "banner_color": "DefaultColor15",
+                        "homebase_name": "",
+                        "banner_icon": "SurvivalBannerStonewoodComplete"
+                    }
+                },
+                "commandRevision": 0
+            }
+        }
+    ],
+    "profileCommandRevision": 0,
+    "serverTime": "2024-03-09T10:48:34.526Z",
+    "responseVersion": 1
+}
