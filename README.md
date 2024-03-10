@@ -1,23 +1,23 @@
 # Pynite The first Fortnite backend written in python
 
 # What does it have:
+
 -Basic lobby loading
 
 -More comming soon
 
 
 # How to set up? 
-
 First Install python from [Here](https://www.python.org/downloads/)
 <br>
-First run install.py to install very important stuff :)
+Second run install.py to install very important stuff :)
 <br>
 After that run python main.py in the dir to start the backend
+<br> 
+Then you have to redirect your build to your backend so run this Fiddler script:
 <br>
-After that you have to redirect your build to your backend so run this Fiddler script:
-<br>
-`import Fiddler;
-
+`
+import Fiddler;
 class Handlers
 {
     static function OnBeforeRequest(oSession: Session) {
@@ -35,5 +35,4 @@ class Handlers
 }`
 <br>
 After that Your done!! Enjoy!
-## Ps: Made in one day, don't expect it to run flawlessly
-
+#Ps: Made in one day, don't expect it to run flawlessly
