@@ -1,0 +1,16 @@
+{
+    "profileRevision": 5,
+    "profileId": "athena",
+    "profileChangesBaseRevision": 4,
+    "profileChanges": [
+        {
+            "changeType": "itemAttrChanged",
+            "itemId": "cfda94ee-3c1d-41f4-a5b4-a241b3d09ce6",
+            "attributeName": "sent_new_notification",
+            "attributeValue": true
+        }
+    ],
+    "profileCommandRevision": 4,
+    "serverTime": "2024-03-09T10:48:51.120Z",
+    "responseVersion": 1
+}

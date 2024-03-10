@@ -165,3 +165,21 @@ def setmtx():
     with open(path, "r", encoding="utf-8") as setmtxResponse:
         data = json.load(setmtxResponse)
     return data
+
+def AthenaQueryProfile():
+    path = os.path.join(parent_dir, "responses/account/athenaProfile.json")
+    with open(path, "r", encoding="utf-8") as athenaProfileResponse:
+        data = json.load(athenaProfileResponse)
+    return data
+
+def AthenaQueryLogin():
+    path = os.path.join(parent_dir, "responses/account/athenaLogin.json")
+    with open(path, "r", encoding="utf-8") as athenaProfileLoginResponse:
+        data = json.load(athenaProfileLoginResponse)
+    return data
+
+def MarkNewQuestNot():
+    path = os.path.join(parent_dir, "responses/account/markNewQuests.json")
+    with open(path, "r", encoding="utf-8") as markNewQuestsResponse:
+        data = json.load(markNewQuestsResponse)
+    return data

@@ -41,7 +41,7 @@ def lunarlogosmall256x256():
     image_path = os.path.join(parent_dir, "public/images/lunar_centered.png")
 
     resized_image = resize_image_small(image_path)
-    resized_image_path = os.path.join(parent_dir, "public/images/lunar_resized.png")
+    resized_image_path = os.path.join(parent_dir, "public/images/lunar_resized_256.png")
     resized_image.save(resized_image_path)
 
     content_type = "image/png"
@@ -97,17 +97,6 @@ def blackhole():
 
     resized_image = resize_image_1920x1080(image_path)
     resized_image_path = os.path.join(parent_dir, "public/images/blackhole_resized.png")
-    resized_image.save(resized_image_path)
-
-    content_type = "image/png"
-    return send_file(resized_image_path, mimetype=content_type)
-
-def lunarlogosmall256x256():
-    parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
-    image_path = os.path.join(parent_dir, "public/images/lunar_centered.png")
-
-    resized_image = resize_image_1200x680(image_path)
-    resized_image_path = os.path.join(parent_dir, "public/images/lunar_resized.png")
     resized_image.save(resized_image_path)
 
     content_type = "image/png"

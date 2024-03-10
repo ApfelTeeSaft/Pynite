@@ -1,5 +1,5 @@
 from modules.pages import fortnitegame
-from modules.account import datarouterresponse, token, externalauths, account, enabled_features, cloudstorage, query_profile, receipts, friends, block, verify, setmtx
+from modules.account import datarouterresponse, token, externalauths, account, enabled_features, cloudstorage, query_profile, receipts, friends, block, verify, setmtx, AthenaQueryProfile, AthenaQueryLogin, MarkNewQuestNot
 from modules.media import apfellogo256x256, lunarlogosmall256x256, seasonxbg, blackhole, blackhole_small
 from modules.rest import calendar, versioncheck, statuscheck
 from modules.store import catalog
@@ -143,11 +143,28 @@ def blockresponse():
 
 @app.route("/account/api/oauth/verify", methods=["GET"])
 def verifyresponse():
-    return verify
+    return verify()
 
 @app.route("/fortnite/api/game/v2/profile/r54hre45h4r5th48r5hrhr54h56rhr/client/SetMtxPlatform", methods=["POST"])
 def setmtxplatform():
     return setmtx()
+
+@app.route("/fortnite/api/game/v2/profile/r54hre45h4r5th48r5hrhr54h56rhr/client/QueryProfile", methods=["POST"])
+def downloadqueryathena():
+    return AthenaQueryProfile()
+
+@app.route("/fortnite/api/game/v2/profile/r54hre45h4r5th48r5hrhr54h56rhr/client/ClientQuestLogin", methods=["POST"])
+def downloadqueryloginathena():
+    return AthenaQueryLogin()
+
+@app.route("/fortnite/api/game/v2/profile/r54hre45h4r5th48r5hrhr54h56rhr/client/MarkNewQuestNotificationSent", methods=["POST"])
+def markNewQuest():
+    return MarkNewQuestNot()
+
+@app.route("/fortnite/api/matchmaking/session/findPlayer/r54hre45h4r5th48r5hrhr54h56rhr", methods=["GET"])
+def idkman():
+    response = make_response("", 204)
+    return response
 
 def run_flask():
     print(f'Pynite Running on Port {fn_port}')
