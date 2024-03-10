@@ -38,4 +38,4 @@ class Handlers
 <br>
 After that Your done, Enjoy!
 <br>
-## Ps: Made in one day, don't expect it to run flawlessly
+Ps: Made in one day, don't expect it to run flawlessly
