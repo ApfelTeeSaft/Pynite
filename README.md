@@ -1,8 +1,8 @@
 # Pynite The first Public Fortnite backend written in python
 
-# What does it have:
+# Stuff working right now:
 
--Basic lobby loading
+-Basic Authentication with Static Replies
 
 -More comming soon
 
