@@ -1,4 +1,4 @@
-# Pynite The first Fortnite backend written in python
+# Pynite The first Public Fortnite backend written in python
 
 # What does it have:
 
