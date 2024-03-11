@@ -1,10 +1,10 @@
 from modules.pages import fortnitegame
-from modules.account import datarouterresponse, token, externalauths, account, enabled_features, cloudstorage, query_profile, receipts, friends, block, verify, setmtx, AthenaQueryProfile, AthenaQueryLogin, MarkNewQuestNot
+from modules.account import datarouterresponse, token, externalauths, account, enabled_features, cloudstorage, query_profile, receipts, friends, block, verify, setmtx, AthenaQueryProfile, AthenaQueryLogin, MarkNewQuestNot, banStatus, username_email, partytimeyippie
 from modules.media import apfellogo256x256, lunarlogosmall256x256, seasonxbg, blackhole, blackhole_small
 from modules.rest import calendar, versioncheck, statuscheck
-from modules.store import catalog
+from modules.store import catalog, keychain
 from modules.cloudstorage import system, defaultengine, defaultgame, defaultruntime
-from flask import Flask, make_response
+from flask import Flask, make_response, request
 from flask_cors import CORS
 
 fn_port = 8383
@@ -18,6 +18,8 @@ def fortnitegameresponse():
 
 @app.route("/datarouter/api/v1/public/data", methods=["POST"])
 def datarouter():
+    form = request.form
+    print(form)
     return datarouterresponse()
 
 @app.route("/images/lunar-small.png", methods=["GET"])
@@ -62,7 +64,9 @@ def respondversion():
 
 @app.route("/fortnite/api/cloudstorage/system", methods=["GET"])
 def respondsystem():
-    return system()
+    #return system() deprecated
+    response = make_response("", 404)
+    return response
 
 @app.route("/fortnite/api/cloudstorage/system/DefaultEngine.ini", methods=["GET"])
 def responddefaultengine():
@@ -165,6 +169,16 @@ def markNewQuest():
 def idkman():
     response = make_response("", 204)
     return response
+
+@app.route("/fortnite/api/storefront/v2/keychain", methods=["GET"])
+def keychains():
+    return keychain()
+
+@app.route(f"/socialban/api/public/v1/{username_email}/ban", methods=["GET"])
+def banned():
+    return banStatus()
+
+@app.route(f"/party/api/v1/Fortnite/user/{username_email}")
 
 def run_flask():
     print(f'Pynite Running on Port {fn_port}')

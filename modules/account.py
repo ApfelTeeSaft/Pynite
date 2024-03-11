@@ -24,7 +24,7 @@ def token():
             data = json.load(static_account_file)
         return data
 
-    elif form_data.get('grant_type') == 'password' and 'username' in form_data and 'password' in form_data and form_data.get('includePerms') == 'true':
+    elif form_data.get('grant_type') == 'password' or 'username' in form_data and 'password' in form_data and form_data.get('includePerms') == 'true':
         # Extract username from email
         global email
         email = form_data['username']
@@ -94,6 +94,12 @@ def account():
 
         
     return jsonify(json_response), 200
+
+def partytimeyippie():
+    path = os.path.join(parent_dir, "responses/account/party.json")
+    with open(path, "r", encoding="utf-8") as enabledFeatures:
+        data = json.load(enabledFeatures)
+    return data
 
 def enabled_features():
     path = os.path.join(parent_dir, "responses/account/enabledFeatures.json")
@@ -180,6 +186,12 @@ def AthenaQueryLogin():
 
 def MarkNewQuestNot():
     path = os.path.join(parent_dir, "responses/account/markNewQuests.json")
+    with open(path, "r", encoding="utf-8") as markNewQuestsResponse:
+        data = json.load(markNewQuestsResponse)
+    return data
+
+def banStatus():
+    path = os.path.join(parent_dir, "responses/account/BanStatus.json")
     with open(path, "r", encoding="utf-8") as markNewQuestsResponse:
         data = json.load(markNewQuestsResponse)
     return data

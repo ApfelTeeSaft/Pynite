@@ -11,3 +11,9 @@ def catalog():
     with open(path, "r", encoding="utf-8") as catalogentry:
         data = json.load(catalogentry)
     return data
+
+def keychain():
+    path = os.path.join(parent_dir, "responses/store/keychains.json")
+    with open(path, "r", encoding="utf-8") as keychainentry:
+        data = json.load(keychainentry)
+    return data
