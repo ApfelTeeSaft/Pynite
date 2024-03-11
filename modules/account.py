@@ -79,7 +79,7 @@ def account():
         "numberOfDisplayNameChanges": 0,
         "ageGroup": "UNKNOWN",
         "headless": "false",
-        "country": "US",
+        "country": "DE",
         "lastName": "Server",
         "preferredLanguage": "en",
         "canUpdateDisplayName": "false",
