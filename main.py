@@ -6,20 +6,28 @@ from modules.store import catalog, keychain
 from modules.cloudstorage import system, defaultengine, defaultgame, defaultruntime
 from flask import Flask, make_response, request
 from flask_cors import CORS
+import re
 
 fn_port = 8383
+current_season = {}
 
 app = Flask(__name__)
 CORS(app)
 
+def extract_fortnite_version(user_agent):
+    pattern = r'Fortnite\+Release-(\d+\.\d+)'
+    match = re.search(pattern, user_agent)
+    return match.group(1) if match else None
+
 @app.route("/content/api/pages/fortnite-game", methods=["GET"])
 def fortnitegameresponse():
+    user_agent = request.headers.get("User-Agent")
+    current_season = extract_fortnite_version(user_agent)
+    print(current_season)
     return fortnitegame()
 
 @app.route("/datarouter/api/v1/public/data", methods=["POST"])
 def datarouter():
-    form = request.form
-    print(form)
     return datarouterresponse()
 
 @app.route("/images/lunar-small.png", methods=["GET"])
