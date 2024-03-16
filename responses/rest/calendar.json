@@ -39,13 +39,13 @@
                         "seasonBegin": "2020-01-01T13:00:00Z",
                         "seasonEnd": "9999-01-01T14:00:00Z",
                         "seasonDisplayedEnd": "9999-01-01T07:30:00Z",
-                        "weeklyStoreEnd": "9999-01-01T00:00:00Z",
-                        "stwEventStoreEnd": "9999-01-01T00:00:00.000Z",
-                        "stwWeeklyStoreEnd": "9999-01-01T00:00:00.000Z",
+                        "weeklyStoreEnd": "9999-12-31T23:59:59.999Z",
+                        "stwEventStoreEnd": "9999-12-31T23:59:59.999Z",
+                        "stwWeeklyStoreEnd": "9999-12-31T23:59:59.999Z",
                         "sectionStoreEnds": {
-                            "Featured": "9999-01-01T00:00:00.000Z"
+                            "Featured": "9999-12-31T23:59:59.999Z"
                         },
-                        "dailyStoreEnd": "9999-01-01T00:00:00Z"
+                        "dailyStoreEnd": "9999-12-31T23:59:59.999Z"
                     }
                 }
             ],
