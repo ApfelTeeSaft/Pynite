@@ -6,6 +6,8 @@ import json
 script_dir = os.path.dirname(__file__)
 parent_dir = os.path.abspath(os.path.join(script_dir, os.pardir))
 
+# goofy ahh rest (don't know what this shit even does lol, but it works)
+
 def calendar():
     path = os.path.join(parent_dir, "responses/rest/calendar.json")
     with open(path, "r", encoding="utf-8") as calendarresponse:
