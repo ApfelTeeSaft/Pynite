@@ -48,7 +48,10 @@ def fortnitegameresponse():
         #the static response is ch1 s4
         return fortnitegame()
     elif s5builds in current_season:
-        #replace with ch1 s4 response
+        #replace with ch1 s5 response
+        return fortnitegame()
+    elif s6builds in current_season:
+        #replace with ch1 s6 response
         return fortnitegame()
     
 @app.route("/fortnite/api/cloudstorage/system", methods=["GET"])
