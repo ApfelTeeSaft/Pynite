@@ -16,8 +16,9 @@ CORS(app)
 
 s1builds = "1.7.2" or "1.8" or "1.8.1" or "1.8.2" or "1.9" or "1.9.1" or "1.10"
 s2builds = "1.11" or "2.1.0" or "2.2.0" or "2.3.0" or "2.4.0" or "2.4.2" or "2.5.0"
-s3builds = "3.0" or "3.1" or "3.2" or "3.3" or "3.5" or "3.6"
+s3builds = "3.0" or "3.1" or "3.1.1" or "3.2" or "3.3" or "3.5" or "3.6"
 s4builds = "4.0" or "4.1" or "4.2" or "4.4" or "4.4.1" or "4.5"
+s5builds = "5.0" or "5.0.1" or "5.10" or "5.21" or "5.30" or "5.40" or "5.41"
 
 def extract_fortnite_version(user_agent):
     pattern = r'Fortnite\+Release-(\d+\.\d+)'
@@ -39,6 +40,9 @@ def fortnitegameresponse():
         #replace with ch1 s3 response
         return fortnitegame()
     elif s4builds in current_season:
+        #the static response is ch1 s4
+        return fortnitegame()
+    elif s5builds in current_season:
         #replace with ch1 s4 response
         return fortnitegame()
 
