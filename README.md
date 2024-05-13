@@ -4,6 +4,8 @@
 
 -Basic Authentication with Static Replies
 
+-User Agent Detection (Auto Season Assign, refer to main.py line 33 and 69 (ong that wasn't on purpose)
+
 -More comming soon
 
 
