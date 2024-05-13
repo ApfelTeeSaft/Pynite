@@ -14,6 +14,11 @@ current_season = {}
 app = Flask(__name__)
 CORS(app)
 
+s1builds = "1.7.2" or "1.8" or "1.8.1" or "1.8.2" or "1.9" or "1.9.1" or "1.10"
+s2builds = "1.11" or "2.1.0" or "2.2.0" or "2.3.0" or "2.4.0" or "2.4.2" or "2.5.0"
+s3builds = "3.0" or "3.1" or "3.2" or "3.3" or "3.5" or "3.6"
+s4builds = "4.0" or "4.1" or "4.2" or "4.4" or "4.4.1" or "4.5"
+
 def extract_fortnite_version(user_agent):
     pattern = r'Fortnite\+Release-(\d+\.\d+)'
     match = re.search(pattern, user_agent)
@@ -24,16 +29,16 @@ def fortnitegameresponse():
     user_agent = request.headers.get("User-Agent")
     current_season = extract_fortnite_version(user_agent)
     print(current_season)
-    if "1.7.2" or "1.8" or "1.8.1" or "1.8.2" or "1.9" or "1.9.1" or "1.10" in current_season:
+    if s1builds in current_season:
         #replace with ch1 s1 response
         return fortnitegame()
-    elif "1.11" or "2.1.0" or "2.2.0" or "2.3.0" or "2.4.0" or "2.4.2" or "2.5.0" in current_season:
+    elif s2builds in current_season:
         #replace with ch1 s2 response
         return fortnitegame()
-    elif "3.0" or "3.1" or "3.2" or "3.3" or "3.5" or "3.6" in current_season:
+    elif s3builds in current_season:
         #replace with ch1 s3 response
         return fortnitegame()
-    elif "4.0" or "4.1" or "4.2" or "4.4" or "4.4.1" or "4.5" in current_season:
+    elif s4builds in current_season:
         #replace with ch1 s4 response
         return fortnitegame()
 
@@ -83,8 +88,11 @@ def respondversion():
 
 @app.route("/fortnite/api/cloudstorage/system", methods=["GET"])
 def respondsystem():
-    #return system() deprecated
+    user_agent = request.headers.get("User-Agent")
+    current_season = extract_fortnite_version(user_agent)
+    #return system() deprecated (ig?!) for S9+
     response = make_response("", 404)
+    if 
     return response
 
 @app.route("/fortnite/api/cloudstorage/system/DefaultEngine.ini", methods=["GET"])
