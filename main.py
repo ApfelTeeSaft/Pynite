@@ -24,7 +24,9 @@ def fortnitegameresponse():
     user_agent = request.headers.get("User-Agent")
     current_season = extract_fortnite_version(user_agent)
     print(current_season)
-    return fortnitegame()
+    if "1.7.2" or "1.8" or "1.8.1" or "1.8.2" or "1.9" or "1.9.1" or "1.10" in current_season:
+        #replace with ch1 s1 response
+        return fortnitegame()
 
 @app.route("/datarouter/api/v1/public/data", methods=["POST"])
 def datarouter():
