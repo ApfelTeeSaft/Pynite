@@ -27,6 +27,9 @@ def fortnitegameresponse():
     if "1.7.2" or "1.8" or "1.8.1" or "1.8.2" or "1.9" or "1.9.1" or "1.10" in current_season:
         #replace with ch1 s1 response
         return fortnitegame()
+    elif "1.11" or "2.1.0" or "2.2.0" or "2.3.0" or "2.4.0" or "2.4.2" or "2.5.0" in current_season:
+        #replace with ch1 s2 response
+        return fortnitegame()
 
 @app.route("/datarouter/api/v1/public/data", methods=["POST"])
 def datarouter():
