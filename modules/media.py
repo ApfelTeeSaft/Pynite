@@ -3,6 +3,8 @@ from flask_cors import CORS
 import os
 from PIL import Image
 
+#all sorts of variable media, if you wanna skid, kys
+
 script_dir = os.path.dirname(__file__)
 parent_dir = os.path.abspath(os.path.join(script_dir, os.pardir, os.pardir))
 
