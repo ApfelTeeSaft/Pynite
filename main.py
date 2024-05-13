@@ -19,6 +19,11 @@ s2builds = "1.11" or "2.1.0" or "2.2.0" or "2.3.0" or "2.4.0" or "2.4.2" or "2.5
 s3builds = "3.0" or "3.1" or "3.1.1" or "3.2" or "3.3" or "3.5" or "3.6"
 s4builds = "4.0" or "4.1" or "4.2" or "4.4" or "4.4.1" or "4.5"
 s5builds = "5.0" or "5.0.1" or "5.10" or "5.21" or "5.30" or "5.40" or "5.41"
+s6builds = "" #etc etc, add more user agent builds here
+s7builds = ""
+s8builds = ""
+s9builds = ""
+s10builds = ""
 
 def extract_fortnite_version(user_agent):
     pattern = r'Fortnite\+Release-(\d+\.\d+)'
@@ -45,6 +50,19 @@ def fortnitegameresponse():
     elif s5builds in current_season:
         #replace with ch1 s4 response
         return fortnitegame()
+    
+@app.route("/fortnite/api/cloudstorage/system", methods=["GET"])
+def respondsystem():
+    user_agent = request.headers.get("User-Agent")
+    current_season = extract_fortnite_version(user_agent)
+    #return system() deprecated (ig?!) for S9+
+    response = make_response("", 404)
+    if s1builds or s2builds or s3builds or s4builds or s5builds or s6builds or s7builds or s8builds:
+        return system()
+    elif s9builds or s10builds in fortnitegame:
+        return response
+    else:
+        exception = make_response("disallowed version", 500)
 
 @app.route("/datarouter/api/v1/public/data", methods=["POST"])
 def datarouter():
@@ -89,15 +107,6 @@ def respondcalendar():
 @app.route("/fortnite/api/v2/versioncheck/Windows", methods=["GET"])
 def respondversion():
     return versioncheck()
-
-@app.route("/fortnite/api/cloudstorage/system", methods=["GET"])
-def respondsystem():
-    user_agent = request.headers.get("User-Agent")
-    current_season = extract_fortnite_version(user_agent)
-    #return system() deprecated (ig?!) for S9+
-    response = make_response("", 404)
-    if 
-    return response
 
 @app.route("/fortnite/api/cloudstorage/system/DefaultEngine.ini", methods=["GET"])
 def responddefaultengine():
