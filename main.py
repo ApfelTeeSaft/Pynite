@@ -33,6 +33,9 @@ def fortnitegameresponse():
     elif "3.0" or "3.1" or "3.2" or "3.3" or "3.5" or "3.6" in current_season:
         #replace with ch1 s3 response
         return fortnitegame()
+    elif "4.0" or "4.1" or "4.2" or "4.4" or "4.4.1" or "4.5" in current_season:
+        #replace with ch1 s4 response
+        return fortnitegame()
 
 @app.route("/datarouter/api/v1/public/data", methods=["POST"])
 def datarouter():
