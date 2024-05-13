@@ -62,6 +62,9 @@ def fortnitegameresponse():
     elif s9builds in current_season:
         #replace with ch1 s9 response
         return fortnitegame()
+    elif s10builds in current_season:
+        #replace with ch1 s10 response
+        return fortnitegame()
     
 @app.route("/fortnite/api/cloudstorage/system", methods=["GET"])
 def respondsystem():
