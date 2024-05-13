@@ -6,6 +6,8 @@ import json
 script_dir = os.path.dirname(__file__)
 parent_dir = os.path.abspath(os.path.join(script_dir, os.pardir))
 
+#this is part of the calendar (i tink), this is where you would have to update the battlepass!
+
 def fortnitegame():
     path = os.path.join(parent_dir, "responses/pages/fortnite-game.json")
     with open(path, "r", encoding="utf-8") as fortnitegamepage:
